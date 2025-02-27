@@ -30,17 +30,17 @@ const config = {
       'classic',
       {
         docs: {
-          sidebarPath: './sidebars.js',
-          editUrl: 'https://github.com/karine001/tokiostack-docs/edit/main/',
+          sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: '/', // This makes the docs the homepage
         },
-        blog: false, // Removed blog section
+        blog: false,
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: require.resolve('./src/css/custom.css'),
         },
       },
     ],
   ],
-
+  
   themeConfig: {
     colorMode: {
       defaultMode: 'light',
@@ -49,20 +49,15 @@ const config = {
     navbar: {
       title: 'TokioStack Docs',
       logo: {
-        alt: 'TokioStack Logo',
+        alt: 'Docusaurus Logo',
         src: 'img/docusaurus.png',
       },
+      style: 'primary', // Ensures navbar uses primary color
       items: [
-        { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Docs' },
-        { href: 'https://github.com/karine001/tokiostack-docs', label: 'GitHub', position: 'right' },
+        { href: 'https://github.com/KARINE001/tokiostack-docs', label: 'GitHub', position: 'right' },
       ],
-    },
-    prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
     },
   },
 };
 
-export default config;
-
+export default config; // ✅ Correct placement

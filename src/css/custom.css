@@ -5,26 +5,72 @@
  */
 
 /* You can override the default Infima variables here. */
+/* ========== Global Theme Colors ========== */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-color-primary: #ff6600; /* Orange */
+  --ifm-color-secondary: #00cc66; /* Green */
+  --ifm-navbar-background-color: #ff6600; /* Orange navbar */
+  --ifm-navbar-link-color: #ffffff; /* White text */
+  --ifm-navbar-link-hover-color: #ffcc99; /* Light orange hover */
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* ========== Dark Mode Styling ========== */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #ff6600; /* Keep orange */
+  --ifm-color-secondary: #00cc66; /* Keep green */
+  --ifm-navbar-background-color: #222; /* Darker navbar */
+  --ifm-navbar-link-color: #ffffff; /* Keep white text */
+  --ifm-navbar-link-hover-color: #ffcc99; /* Light orange hover */
+}
+
+/* ========== Navbar Styling ========== */
+.navbar {
+  background-color: var(--ifm-navbar-background-color) !important;
+}
+
+.navbar__link {
+  color: var(--ifm-navbar-link-color) !important;
+}
+
+.navbar__link:hover {
+  color: var(--ifm-navbar-link-hover-color) !important;
+}
+
+/* ========== Buttons Styling ========== */
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center; /* Center buttons horizontally */
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+}
+
+.button--primary {
+  background-color: #ff6600; /* Orange */
+  color: white;
+  border: 2px solid #ff6600;
+}
+
+.button--primary:hover {
+  background-color: #cc5500;
+}
+
+.button--secondary {
+  background-color: #00cc66; /* Green */
+  color: white;
+  border: 2px solid #00cc66;
+}
+
+.button--secondary:hover {
+  background-color: #00994d;
 }
