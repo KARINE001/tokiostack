@@ -32,15 +32,17 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/', // This makes the docs the homepage
+          sidebarCollapsed: false, // Ensure sidebar is expanded by default
+          editUrl: 'https://github.com/karine001/tokiostack-docs/edit/main/',
         },
-        blog: false,
+        blog: false, // Removed blog section
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
       },
     ],
   ],
-  
+
   themeConfig: {
     colorMode: {
       defaultMode: 'light',
@@ -54,10 +56,17 @@ const config = {
       },
       style: 'primary', // Ensures navbar uses primary color
       items: [
+        { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Docs' },
         { href: 'https://github.com/KARINE001/tokiostack-docs', label: 'GitHub', position: 'right' },
       ],
+    },
+    docs: {
+      sidebar: {
+        autoCollapseCategories: false, // Keep categories expanded
+        hideable: false, // Ensure sidebar is always visible
+      },
     },
   },
 };
 
-export default config; // ✅ Correct placement
+export default config;
