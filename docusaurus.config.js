@@ -49,7 +49,7 @@ const config = {
       disableSwitch: false,
     },
     navbar: {
-      title: 'TokioStack Docs',
+      title: 'TokioStack',
       logo: {
         alt: 'Docusaurus Logo',
         src: 'img/docusaurus.png',
