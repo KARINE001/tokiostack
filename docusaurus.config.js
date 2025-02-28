@@ -9,12 +9,12 @@ const config = {
 
   // ✅ Update the production URL
   url: 'https://karine001.github.io',
-  baseUrl: '/tokiostack-docs/',  // Must match your repo name
+  baseUrl: '/tokiostack/',  // Updated repo name
   trailingSlash: false,
 
   // ✅ GitHub pages deployment config.
   organizationName: 'karine001', // Your GitHub username
-  projectName: 'tokiostack-docs',  // Your repo name
+  projectName: 'tokiostack',  // Updated repo name
   deploymentBranch: 'gh-pages',  // Branch where GitHub Pages deploys
 
   onBrokenLinks: 'warn', // Allow broken links temporarily for UI setup
@@ -32,8 +32,8 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/', // This makes the docs the homepage
-          sidebarCollapsed: false, // Ensure sidebar is expanded by default
-          editUrl: 'https://github.com/karine001/tokiostack-docs/edit/main/',
+          sidebarCollapsed: true, // Ensure sidebar categories are collapsed by default
+          editUrl: 'https://github.com/karine001/tokiostack/edit/main/',
         },
         blog: false, // Removed blog section
         theme: {
@@ -56,13 +56,12 @@ const config = {
       },
       style: 'primary', // Ensures navbar uses primary color
       items: [
-        { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Docs' },
-        { href: 'https://github.com/KARINE001/tokiostack-docs', label: 'GitHub', position: 'right' },
+        { href: 'https://github.com/KARINE001/tokiostack', label: 'GitHub', position: 'right' },
       ],
     },
     docs: {
       sidebar: {
-        autoCollapseCategories: false, // Keep categories expanded
+        autoCollapseCategories: true, // Sidebar folders start closed
         hideable: false, // Ensure sidebar is always visible
       },
     },

@@ -14,6 +14,9 @@
   --ifm-navbar-background-color: #222; /* Darker navbar */
   --ifm-navbar-link-color: #ffffff; /* Keep white text */
   --ifm-navbar-link-hover-color: #ffcc99; /* Light orange hover */
+  --ifm-sidebar-background-color: #1a1a1a; /* Dark sidebar */
+  --ifm-sidebar-link-color: #ffffff; /* White sidebar links */
+  --ifm-sidebar-link-hover-color: #ff6600; /* Orange hover */
 }
 
 /* ========== Navbar Styling ========== */
@@ -31,8 +34,16 @@
 
 /* ========== Sidebar Styling ========== */
 .theme-doc-sidebar-container {
-  background-color: #f8f9fa;
-  border-right: 1px solid #ddd;
+  background-color: var(--ifm-sidebar-background-color) !important;
+  border-right: 1px solid #444;
+}
+
+.theme-doc-sidebar-item-link {
+  color: var(--ifm-sidebar-link-color) !important;
+}
+
+.theme-doc-sidebar-item-link:hover {
+  color: var(--ifm-sidebar-link-hover-color) !important;
 }
 
 /* ========== Buttons Styling ========== */
