@@ -3,7 +3,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'TokioStack Docs',
+  title: 'TokioStack',
   tagline: 'Mastering Node Ops',
   favicon: 'img/favicon.ico',
 
@@ -31,8 +31,8 @@ const config = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: '/', // This makes the docs the homepage
-          sidebarCollapsed: true, // Ensure sidebar categories are collapsed by default
+          routeBasePath: '/docs', // Keeps the main page AND a separate docs page
+          sidebarCollapsed: true, // Sidebar starts collapsed
           editUrl: 'https://github.com/karine001/tokiostack/edit/main/',
         },
         blog: false, // Removed blog section
@@ -56,7 +56,8 @@ const config = {
       },
       style: 'primary', // Ensures navbar uses primary color
       items: [
-        { href: 'https://github.com/KARINE001/tokiostack', label: 'GitHub', position: 'right' },
+        { to: '/docs/intro', label: 'Docs', position: 'left' },
+        { href: 'https://github.com/KARINE001', label: 'GitHub', position: 'right' },
       ],
     },
     docs: {
