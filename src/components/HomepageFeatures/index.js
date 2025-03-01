@@ -1,64 +1,63 @@
+import React from 'react';
+import Layout from '@theme/Layout';
+import Link from '@docusaurus/Link';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
 
-const FeatureList = [
+const features = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
+    title: "🔐 VPS Security Guide",
+    description: "How to secure your VPS before hosting blockchain nodes.",
+    link: "/docs/VPS-and-Security-Guides/VPS-Guide-Securing-a-Server-to-Host-a-Node",
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
+    title: "🔗 Install Pipe Network Node",
+    description: "Step-by-step guide to setting up a Pipe Network Cache Node.",
+    link: "/docs/Node-installation-guides/pipe-network-cache-node",
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
+    title: "🔄 Automate Node Updates",
+    description: "Use Watchtower to keep your nodes updated automatically.",
+    link: "/docs/Optimization-and-Maintenance/Automating-node-updates-with-watchtower",
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ title, description, link }) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
+    <Link to={link} className="card">
+      <div className="card__body">
+        <h3>{title}</h3>
         <p>{description}</p>
       </div>
-    </div>
+    </Link>
   );
 }
 
-export default function HomepageFeatures() {
+export default function Home() {
+  const { siteConfig } = useDocusaurusContext();
+
   return (
-    <section className={styles.features}>
+    <Layout title={siteConfig.title} description={siteConfig.tagline}>
+      <header className="heroBanner">
+        <div className="container">
+          <h1 className="heroTitle">TokioStack Docs 🚀</h1>
+          <p className="heroSubtitle">Mastering Node Ops</p>
+          <p className="description">
+            Your go-to resource for installing, managing, and optimizing blockchain nodes.
+          </p>
+        </div>
+      </header>
+
+      {/* Feature Grid Section */}
       <div className="container">
         <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+          {features.map((props, idx) => (
+            <div key={idx} className="col col--4">
+              <Feature {...props} />
+            </div>
           ))}
         </div>
       </div>
-    </section>
+    </Layout>
   );
 }

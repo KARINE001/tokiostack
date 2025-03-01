@@ -32,55 +32,77 @@
   color: var(--ifm-navbar-link-hover-color) !important;
 }
 
-/* ========== Sidebar Styling ========== */
-.theme-doc-sidebar-container {
-  background-color: var(--ifm-sidebar-background-color) !important;
-  border-right: 1px solid #444;
+/* ========== Navbar Font Size Adjustments ========== */
+.navbar__title {
+  font-size: 1.3rem !important; /* Slightly smaller title size */
 }
 
-.theme-doc-sidebar-item-link {
-  color: var(--ifm-sidebar-link-color) !important;
+.navbar__link {
+  font-size: 1rem !important; /* Slightly adjusted nav link size */
 }
 
-.theme-doc-sidebar-item-link:hover {
-  color: var(--ifm-sidebar-link-hover-color) !important;
-}
-
-/* ========== Buttons Styling ========== */
-.buttonContainer {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  margin-top: 1rem;
-  justify-content: center; /* Center buttons horizontally */
-}
-
-.button {
-  padding: 10px 20px;
-  font-size: 16px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
+/* ========== Hero Section Styling ========== */
+.heroBanner {
   text-align: center;
-  display: inline-block;
+  padding: 4rem 2rem;
+  margin-top: 2rem;
 }
 
-.button--primary {
-  background-color: #ff6600; /* Orange */
-  color: white;
-  border: 2px solid #ff6600;
+.heroTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
-.button--primary:hover {
-  background-color: #cc5500;
+.heroSubtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
-.button--secondary {
-  background-color: #00cc66; /* Green */
-  color: white;
-  border: 2px solid #00cc66;
+.description {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.button--secondary:hover {
-  background-color: #00994d;
+/* ========== Centered Logo Below Hero Text ========== */
+.centerLogo {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.centerLogo img {
+  width: 150px; /* Adjust logo size */
+  height: auto;
+}
+
+/* ========== Feature Cards ========== */
+.featuresContainer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.featureCard {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+  text-decoration: none;
+}
+
+.featureCard:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== Responsive Layout ========== */
+@media (max-width: 768px) {
+  .featuresContainer .col {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
