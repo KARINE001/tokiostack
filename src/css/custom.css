@@ -113,28 +113,6 @@
   opacity: 0.9;
 }
 
-/* Ensure Responsive Layout */
-@media (max-width: 768px) {
-  .featuresContainer .col {
-    flex: 100%;
-    max-width: 100%;
-  }
-}
-
-/* ========== Force Navbar Links to Stay Visible on Mobile ========== */
-@media (max-width: 768px) {
-  .navbar__items {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-  }
-
-  .navbar__item {
-    display: block !important;
-    padding: 0.5rem 1rem !important;
-  }
-}
-
 @media (max-width: 768px) {
   .heroBanner {
     padding: 3rem 1rem !important;
