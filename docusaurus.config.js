@@ -9,7 +9,7 @@ const config = {
 
   // ✅ Update the production URL
   url: 'https://karine001.github.io',
-  baseUrl: '/tokiostack/',  // Updated repo name
+  baseUrl: '/',  // Updated repo name
   trailingSlash: false,
   
 
