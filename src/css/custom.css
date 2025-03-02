@@ -121,3 +121,35 @@
   }
 }
 
+/* ========== Force Navbar Links to Stay Visible on Mobile ========== */
+@media (max-width: 768px) {
+  .navbar__items {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+
+  .navbar__item {
+    display: block !important;
+    padding: 0.5rem 1rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroBanner {
+    padding: 3rem 1rem !important;
+  }
+
+  .heroTitle {
+    font-size: 2rem !important;
+  }
+
+  .heroSubtitle {
+    font-size: 1.2rem !important;
+  }
+
+  .buttons {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+}
