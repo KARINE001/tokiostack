@@ -1,10 +1,9 @@
 ---
-title: "Welcome to TokioStack Docs"
+title: "Getting Started"
 sidebar_position: 1
 ---
 
-### 📌 Getting Started  
-🚀 **Ready to install your first node? Start here:**  
+### 🚀 **Ready to install your first node? Start here:** 
 
 <div class="buttonContainer">
   <a class="button button--primary button--lg" href="/docs/VPS-and-Security-Guides/VPS-Guide-Securing-a-Server-to-Host-a-Node"> ✅ Secure Your VPS </a>
