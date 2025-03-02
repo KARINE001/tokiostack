@@ -7,15 +7,14 @@ const config = {
   tagline: 'Mastering Node Ops',
   favicon: 'img/favicon.ico',
 
-  // ✅ Update the production URL
-  url: 'https://karine001.github.io',
-  baseUrl: '/tokiostack/',  // Updated repo name
-  trailingSlash: false,
-
-  // ✅ GitHub pages deployment config.
-  organizationName: 'karine001', // Your GitHub username
-  projectName: 'tokiostack',  // Updated repo name
-  deploymentBranch: 'gh-pages',  // Branch where GitHub Pages deploys
+  module.exports = {
+    title: 'TokioStack',
+    url: 'https://tokiostack.pages.dev', // Cloudflare Pages URL
+    baseUrl: '/',
+    favicon: 'img/favicon.ico',
+    organizationName: 'KARINE001', // GitHub org/user name
+    projectName: 'tokiostack', // Repo name
+    trailingSlash: false, // Ensures correct routing on Cloudflare Pages
 
   onBrokenLinks: 'warn', // Allow broken links temporarily for UI setup
   onBrokenMarkdownLinks: 'warn',
