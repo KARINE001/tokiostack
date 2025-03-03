@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import clsx from 'clsx';
 
 const features = [
   {
@@ -22,23 +21,12 @@ const features = [
   },
 ];
 
-function Feature({ title, description, link }) {
-  return (
-    <Link to={link} className="card">
-      <div className="card__body">
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
-    </Link>
-  );
-}
-
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
 
   return (
     <Layout title={siteConfig.title} description={siteConfig.tagline}>
-      <header className="heroBanner">
+      <header className="heroBanner text-center">
         <div className="container">
           <h1 className="heroTitle">TokioStack Docs 🚀</h1>
           <p className="heroSubtitle">Mastering Node Ops</p>
@@ -48,16 +36,14 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Feature Grid Section */}
-      <div className="container">
-        <div className="row">
-          {features.map((props, idx) => (
-            <div key={idx} className="col col--4">
-              <Feature {...props} />
-            </div>
-          ))}
-        </div>
-      </div>
+      <div className="featuresContainer">
+  {features.map((feature, index) => (
+    <Link to={feature.link} className="featureCard" key={index}>
+      <h3 className="text-lg font-bold">{feature.title}</h3>
+      <p className="mt-2">{feature.description}</p>
+    </Link>
+  ))}
+</div>
     </Layout>
   );
 }

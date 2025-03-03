@@ -1,60 +1,35 @@
-/* ========== Import Tailwind Styles ========== */
-@import "tailwindcss";
-
-/* ========== Global Theme Colors ========== */
+/* ========== General Styling ========== */
 :root {
-  --ifm-color-primary: #ff6600; /* Orange */
-  --ifm-color-secondary: #00cc66; /* Green */
-  --ifm-navbar-background-color: #ff6600; /* Orange navbar */
-  --ifm-navbar-link-color: #ffffff; /* White text */
-  --ifm-navbar-link-hover-color: #ffcc99; /* Light orange hover */
-  --ifm-font-size-base: 17px; /* Slightly reduce base font size */
-}
-
-/* ========== Dark Mode Styling ========== */
-[data-theme='dark'] {
-  --ifm-color-primary: #ff6600;
-  --ifm-color-secondary: #00cc66;
-  --ifm-navbar-background-color: #222;
-  --ifm-navbar-link-color: #ffffff;
-  --ifm-navbar-link-hover-color: #ffcc99;
-  --ifm-sidebar-background-color: #1a1a1a;
-  --ifm-sidebar-link-color: #ffffff;
-  --ifm-sidebar-link-hover-color: #ff6600;
+  --primary-color: #ff6600;
+  --secondary-color: #00cc66;
+  --navbar-bg-color: #ff6600;
+  --text-color: #ffffff;
+  --text-hover-color: #ffcc99;
+  --base-font-size: 17px;
 }
 
 /* ========== Navbar Styling ========== */
 .navbar {
-  background-color: var(--ifm-navbar-background-color) !important;
+  background-color: var(--navbar-bg-color) !important;
 }
 
 .navbar__link {
-  color: var(--ifm-navbar-link-color) !important;
-  font-size: 1.1rem !important; /* Slightly reduce */
+  color: var(--text-color) !important;
+  font-size: 1.1rem !important;
 }
 
 .navbar__link:hover {
-  color: var(--ifm-navbar-link-hover-color) !important;
+  color: var(--text-hover-color) !important;
 }
 
 .navbar__title {
-  font-size: 1.4rem !important; /* Reduce 'TokioStack' size */
+  font-size: 1.4rem !important;
   font-weight: bold;
-}
-
-/* ========== Sidebar Styling ========== */
-.menu__list-item {
-  font-size: 1.05rem !important; /* Slightly reduce sidebar text size */
-}
-
-/* ========== Adjust Font Sizes Globally ========== */
-body {
-  font-size: var(--ifm-font-size-base);
 }
 
 .heroBanner {
   text-align: center;
-  padding: 6rem 2rem;
+  padding: 8rem 2rem; /* Increases space from navbar */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,54 +37,69 @@ body {
 }
 
 .heroTitle {
-  font-size: 3rem !important; /* Reduce title size */
+  font-size: 3rem;
   font-weight: bold;
   text-align: center;
 }
 
 .heroSubtitle {
-  font-size: 1.5rem !important; /* Reduce subtitle size */
+  font-size: 1.5rem;
   margin-bottom: 1.5rem;
   text-align: center;
 }
 
 .description {
-  font-size: 1.2rem !important; /* Reduce paragraph text size */
+  font-size: 1.2rem;
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
 }
 
-/* ========== Adjust Markdown (.md) Files Text Size ========== */
-.markdown {
-  font-size: 1.15rem !important; /* Slightly reduce for uniformity */
-}
-
-/* ========== Center Buttons in intro.md with Tailwind Flex/Grid ========== */
-.buttonContainer {
-  @apply flex flex-row justify-center items-center gap-4 flex-wrap;
-}
-
-/* ========== Home Page Feature Cards ========== */
+/* ========== Feature Cards Styling Without Tailwind ========== */
 .featuresContainer {
-  @apply grid grid-cols-1 md:grid-cols-3 gap-4 justify-center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .featureCard {
-  @apply bg-orange-500 text-white text-center p-5 rounded-lg shadow-lg transition-all;
+  background-color: #ff6600;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  width: 300px;
+  text-decoration: none; /* Removes underline */
 }
 
 .featureCard:hover {
-  @apply scale-105 shadow-xl;
+  transform: scale(1.05);
 }
 
-/* ========== Responsive Adjustments ========== */
+.featureCard a {
+  text-decoration: none !important; /* Removes blue underline */
+  color: inherit !important;
+}
+
+.featureCard:nth-child(2) {
+  background-color: #00cc66; /* Middle card green */
+}
+
+.menu__list-item-collapsible {
+  font-weight: bold !important;
+}
+
+/* ========== Responsive Fix ========== */
 @media (max-width: 768px) {
-  .buttons {
-    flex-direction: column !important;
-    gap: 10px !important;
-  }
-  .heroTitle {
-    font-size: 2.5rem !important;
+  .featuresContainer {
+    flex-direction: column;
+    align-items: center;
   }
 }
