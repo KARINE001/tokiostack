@@ -5,16 +5,13 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const isCloudflare = process.env.CLOUDFLARE === 'true';
 
 const config = {
-  title: 'TokioStack',
-  tagline: 'Mastering Node Ops',
-  favicon: 'img/favicon.ico',
-
-  url: isCloudflare ? 'https://tokiostack.pages.dev' : 'https://karine001.github.io',
-  baseUrl: isCloudflare ? '/' : '/tokiostack/',
-  organizationName: 'KARINE001', // GitHub username
-  projectName: 'tokiostack', // Repo name
+  title: "TokioStack",
+  url: "https://tokiostack.pages.dev", // Your Cloudflare Pages URL
+  baseUrl: "/", // IMPORTANT: Use "/" for Cloudflare Pages
+  organizationName: "KARINE001", // GitHub username
+  projectName: "tokiostack", // Repository name
   trailingSlash: false,
-  deploymentBranch: 'gh-pages',
+  deploymentBranch: "gh-pages",
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
