@@ -1,12 +1,6 @@
 // @ts-check
 import { themes as prismThemes } from 'prism-react-renderer';
 
-theme: {
-  customCss: require.resolve('./src/css/custom.css'),
-},
-
-
-
 /** @type {import('@docusaurus/types').Config} */
 const isCloudflare = process.env.CLOUDFLARE === 'true';
 
@@ -20,9 +14,9 @@ const config = {
   organizationName: 'KARINE001', // GitHub username
   projectName: 'tokiostack', // Repo name
   trailingSlash: false,
-  deploymentBranch: 'gh-pages', // Branch where GitHub Pages deploys
+  deploymentBranch: 'gh-pages',
 
-  onBrokenLinks: 'warn', // Allow broken links temporarily for UI setup
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
@@ -36,13 +30,11 @@ const config = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: '/docs', // Keeps the main page AND a separate docs page
-          sidebarCollapsed: true, // Sidebar starts collapsed
-          editUrl: 'https://github.com/KARINE001/tokiostack/edit/main/',
+          routeBasePath: '/docs',
         },
-        blog: false, // Removed blog section
+        blog: false,
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve('./src/css/custom.css'), // Ensure this is correctly set
         },
       },
     ],
@@ -56,22 +48,23 @@ const config = {
     navbar: {
       title: 'TokioStack',
       logo: {
-        alt: 'Docusaurus Logo',
+        alt: 'TokioStack Logo',
         src: 'img/docusaurus.png',
       },
-      style: 'primary', // Ensures navbar uses primary color
+      style: 'primary',
       items: [
         { to: '/docs/intro', label: 'Docs', position: 'left' },
-        { href: 'https://github.com/KARINE001', label: 'GitHub', position: 'right' },
+        { href: 'https://github.com/KARINE001/tokiostack', label: 'GitHub', position: 'right' },
       ],
     },
-    docs: {
-      sidebar: {
-        autoCollapseCategories: true, // Sidebar folders start closed
-        hideable: false, // Ensure sidebar is always visible
-      },
-    },
   },
+
+  stylesheets: [
+    {
+      href: '/static/css/tailwind.css', // Ensures TailwindCSS is properly loaded
+      type: 'text/css',
+    },
+  ],
 };
 
 export default config;
