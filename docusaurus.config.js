@@ -1,6 +1,12 @@
 // @ts-check
 import { themes as prismThemes } from 'prism-react-renderer';
 
+theme: {
+  customCss: require.resolve('./src/css/custom.css'),
+},
+
+
+
 /** @type {import('@docusaurus/types').Config} */
 const isCloudflare = process.env.CLOUDFLARE === 'true';
 
