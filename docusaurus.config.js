@@ -1,67 +1,51 @@
-// @ts-check
-import { themes as prismThemes } from 'prism-react-renderer';
-
-/** @type {import('@docusaurus/types').Config} */
-const isCloudflare = process.env.CLOUDFLARE === 'true';
-
 const config = {
   title: "TokioStack",
-  url: "https://tokiostack.pages.dev", // Your Cloudflare Pages URL
-  baseUrl: "/", // IMPORTANT: Use "/" for Cloudflare Pages
-  organizationName: "KARINE001", // GitHub username
-  projectName: "tokiostack", // Repository name
+  url: "https://yourcustomdomain.com", // Update if using a custom domain
+  baseUrl: "/",
+  organizationName: "KARINE001",
+  projectName: "tokiostack",
   trailingSlash: false,
   deploymentBranch: "gh-pages",
 
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
-
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
-
   presets: [
     [
-      'classic',
+      "classic",
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: '/docs',
+          sidebarPath: require.resolve("./sidebars.js"), // Ensures sidebar loads
+          routeBasePath: "docs",
         },
         blog: false,
         theme: {
-          customCss: require.resolve('./src/css/custom.css'), // Ensure this is correctly set
+          customCss: require.resolve("./src/css/custom.css"),
         },
       },
     ],
   ],
 
   themeConfig: {
-    colorMode: {
-      defaultMode: 'light',
-      disableSwitch: false,
-    },
     navbar: {
-      title: 'TokioStack',
+      title: "TokioStack Docs",
       logo: {
-        alt: 'TokioStack Logo',
-        src: 'img/docusaurus.png',
+        alt: "TokioStack Logo",
+        src: "img/logo.svg",
       },
-      style: 'primary',
       items: [
-        { to: '/docs/intro', label: 'Docs', position: 'left' },
-        { href: 'https://github.com/KARINE001/tokiostack', label: 'GitHub', position: 'right' },
+        { to: "/docs", label: "Docs", position: "left" },
+        {
+          href: "https://github.com/KARINE001",
+          label: "GitHub",
+          position: "right",
+        },
       ],
     },
-  },
-
-  stylesheets: [
-    {
-      href: '/static/css/tailwind.css', // Ensures TailwindCSS is properly loaded
-      type: 'text/css',
+    docs: {
+      sidebar: {
+        hideable: true, // Allows sidebar to be collapsible
+        autoCollapseCategories: true, // Auto-collapse categories
+      },
     },
-  ],
+  },
 };
 
-export default config;
+module.exports = config;
