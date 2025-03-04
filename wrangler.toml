@@ -1,6 +1,6 @@
 name = "tokiostack"
 type = "javascript"
-account_id = "f57f88ad295c1f7b139bafaf523bfa2d"
+account_id = "your-cloudflare-account-id"
 workers_dev = true
 route = ""
 zone_id = "your-cloudflare-zone-id"
@@ -9,3 +9,6 @@ zone_id = "your-cloudflare-zone-id"
 command = "npm run build"
 upload.format = "service-worker"
 upload.dir = "build"
+
+[pages]
+pages_build_output_dir = "build"
