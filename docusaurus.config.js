@@ -1,11 +1,11 @@
 const config = {
   title: "TokioStack",
-  url: "https://tokiostack.com", // Custom domain
-  baseUrl: "/", // This must be "/" for Cloudflare
+  url: "https://yourcustomdomain.com", // Update if using a custom domain
+  baseUrl: "/",
   organizationName: "KARINE001",
   projectName: "tokiostack",
   trailingSlash: false,
-};
+  deploymentBranch: "gh-pages",
 
   presets: [
     [
@@ -31,9 +31,9 @@ const config = {
         src: "img/logo.svg",
       },
       items: [
-        { to: "/docs", label: "Docs", position: "left" },
+        { to: "/docs/", label: "Docs", position: "left" },
         {
-          href: "https://github.com/KARINE001",
+          href: "https://github.com/KARINE001/tokiostack",
           label: "GitHub",
           position: "right",
         },
