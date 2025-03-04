@@ -1,6 +1,6 @@
 const config = {
   title: "TokioStack",
-  url: "https://tokiostack.com", // Custom domain
+  url: "tokiostack.pages.dev", // Custom domain
   baseUrl: "/", // Cloudflare Pages uses "/"
   organizationName: "KARINE001",
   projectName: "tokiostack",

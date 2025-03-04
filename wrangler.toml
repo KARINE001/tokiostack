@@ -1,6 +1,6 @@
 name = "tokiostack"
 type = "javascript"
-account_id = "your-cloudflare-account-id"
+account_id = "f57f88ad295c1f7b139bafaf523bfa2d"
 workers_dev = true
 route = ""
 zone_id = "your-cloudflare-zone-id"
