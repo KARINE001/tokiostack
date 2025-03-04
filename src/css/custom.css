@@ -56,40 +56,37 @@
 }
 
 /* ========== Feature Cards Styling Without Tailwind ========== */
-.featuresContainer {
+/* Feature Cards Styling */
+.cardContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  margin-top: 40px;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 20px;
 }
 
-.featureCard {
-  background-color: #ff6600;
+@media (max-width: 768px) {
+  .cardContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.card {
+  background: #ff7f50;
   color: white;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
+  width: 280px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out;
-  width: 300px;
-  text-decoration: none; /* Removes underline */
+  text-decoration: none;
 }
 
-.featureCard:hover {
+.card:hover {
   transform: scale(1.05);
-}
-
-.featureCard a {
-  text-decoration: none !important; /* Removes blue underline */
-  color: inherit !important;
-}
-
-.featureCard:nth-child(2) {
-  background-color: #00cc66; /* Middle card green */
+  background: #ff6347;
 }
 
 .menu__list-item-collapsible {
