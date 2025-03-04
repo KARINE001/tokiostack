@@ -1,11 +1,10 @@
 const config = {
   title: "TokioStack",
   url: "https://tokiostack.com", // Custom domain
-  baseUrl: "/", // Cloudflare Pages uses "/"
+  baseUrl: "/", // This must be "/" for Cloudflare
   organizationName: "KARINE001",
   projectName: "tokiostack",
   trailingSlash: false,
-  deploymentBranch: "main",
 };
 
   presets: [

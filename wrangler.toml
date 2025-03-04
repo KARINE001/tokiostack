@@ -3,6 +3,16 @@ type = "javascript"
 account_id = "f57f88ad295c1f7b139bafaf523bfa2d"
 workers_dev = true
 route = ""
+zone_id = "your-cloudflare-zone-id"
+
+[build]
+command = "npm run build"
+upload.format = "service-worker"
+upload.dir = "build"name = "tokiostack"
+type = "javascript"
+account_id = "f57f88ad295c1f7b139bafaf523bfa2d"
+workers_dev = true
+route = ""
 zone_id = ""
 compatibility_date = "2023-03-02"
 
