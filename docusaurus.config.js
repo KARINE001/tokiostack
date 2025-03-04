@@ -6,7 +6,6 @@ const config = {
   projectName: "tokiostack",
   trailingSlash: false,
   deploymentBranch: "main",
-};
 
   presets: [
     [
